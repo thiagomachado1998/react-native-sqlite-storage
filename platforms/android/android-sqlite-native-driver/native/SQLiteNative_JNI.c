@@ -189,7 +189,7 @@ Java_io_liteglue_SQLiteNative_sqlc_1db_1prepare_1st__JLjava_lang_String_2(JNIEnv
 
   free(_res);
 
-  return instance;
+  return (jlong)instance;
 }
 
 

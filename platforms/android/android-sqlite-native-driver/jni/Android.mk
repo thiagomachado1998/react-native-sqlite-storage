@@ -33,7 +33,7 @@ LOCAL_CFLAGS += -DSQLITE_ENABLE_JSON1
 # new stable default page size ref:
 # - http://sqlite.org/releaselog/3_12_0.html
 # - http://sqlite.org/pgszchng2016.html
-LOCAL_CFLAGS += -DSQLITE_DEFAULT_PAGE_SIZE=4096
+LOCAL_CFLAGS += -DSQLITE_DEFAULT_PAGE_SIZE=16384
 LOCAL_CFLAGS += -DSQLITE_DEFAULT_CACHE_SIZE=-2000
 
 LOCAL_SRC_FILES := ../native/sqlc_all.c
