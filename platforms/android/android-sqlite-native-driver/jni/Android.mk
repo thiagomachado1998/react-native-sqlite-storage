@@ -37,5 +37,14 @@ LOCAL_CFLAGS += -DSQLITE_DEFAULT_PAGE_SIZE=16384
 LOCAL_CFLAGS += -DSQLITE_DEFAULT_CACHE_SIZE=-2000
 
 LOCAL_SRC_FILES := ../native/sqlc_all.c
+LOCAL_LDFLAGS += -Wl,-z,max-page-size=0x4000
+
+#command used to recompile images
+# /Users/thiagojesus/Library/Android/sdk/ndk/27.1.12297006/ndk-build clean
+# /Users/thiagojesus/Library/Android/sdk/ndk/27.1.12297006/ndk-build \
+# NDK_PROJECT_PATH=. \
+# APP_BUILD_SCRIPT=Android.mk \
+# APP_PLATFORM=android-33 \
+# APP_ABI="armeabi-v7a arm64-v8a x86 x86_64" V=1
 
 include $(BUILD_SHARED_LIBRARY)
